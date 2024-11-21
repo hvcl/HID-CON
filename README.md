@@ -17,4 +17,8 @@ Tensorflow 2
 The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
 
 # Inference
+   
+```python
 python inference.py --input_file xxx.csv
+   
+```python
