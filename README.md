@@ -20,5 +20,4 @@ The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HI
    
 ```python
 python inference.py --input_file xxx.csv
-   
-```python
+```
