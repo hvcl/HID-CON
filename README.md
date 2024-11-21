@@ -19,5 +19,5 @@ The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HI
 # Inference
    
 ```python
-python inference.py --model_path .../ckpt.hdf5 --input_file xxx.csv
+ python inference_github.py --model_path .../best.hdf5 --input_file ../xx.csv --save_path /xxx/xxx --aver_path .../best_aver.npy
 ```
