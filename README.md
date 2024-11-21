@@ -17,7 +17,7 @@ Tensorflow 2
 The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
 
 # Inference
-   
+   The 'aver' can be first downlaoded from tis page first.
 ```python
  python inference_github.py --model_path .../best.hdf5 --input_file ../xx.csv --save_path /xxx/xxx --aver_path .../best_aver.npy
 ```
