@@ -12,3 +12,6 @@ Tensorflow 2
 1. Download the raw WSI data.
 2. Prepare the patches.
 3. Store all the patches directory in a .csv file.
+
+# Download Checkpoint
+The checkpoint of this model can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main)
