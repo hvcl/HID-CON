@@ -8,13 +8,13 @@ By [Jing Wei Tan](https://scholar.google.com/citations?user=_PMI46gAAAAJ&hl=en),
 
 
 ### Abstract
-**Purpose**
+**Purpose:**
 Biliary tract cancer, also known as intrahepatic cholangiocarcinoma (IHCC), is a rare disease that shows no clear symptoms during its early stage, but its prognosis depends highly on the cancer subtype. Hence, an accurate cancer subtype classification model is necessary to provide better treatment plans to patients and to reduce mortality. However, annotating histopathology images at the pixel or patch level is time-consuming and labor-intensive for giga-pixel whole slide images. To address this problem, we propose a weakly supervised method for classifying IHCC subtypes using only image-level labels.
-**Approach**
+**Approach:**
 The core idea of the proposed method is to detect regions (i.e., subimages or patches) commonly included in all subtypes, which we name the “hidden class,” and to remove them via iterative application of contrastive loss and label smoothing. Doing so will enable us to obtain only patches that faithfully represent each subtype, which are then used to train the image-level classification model by multiple instance learning (MIL).
-**Results**
+**Results:**
 Our method outperforms the state-of-the-art weakly supervised learning methods ABMIL, TransMIL, and DTFD-MIL by ∼17%, 18%, and 8%, respectively, and achieves performance comparable to that of supervised methods.
-**Conclusions**
+**Conclusion:**
 The introduction of a hidden class to represent patches commonly found across all subtypes enhances the accuracy of IHCC classification and addresses the weak labeling problem in histopathology images.
 
 # Framework 
