@@ -17,18 +17,30 @@ Our method outperforms the state-of-the-art weakly supervised learning methods A
 **Conclusion:**
 The introduction of a hidden class to represent patches commonly found across all subtypes enhances the accuracy of IHCC classification and addresses the weak labeling problem in histopathology images.
 
-# Framework 
+## Framework 
 Tensorflow 2
 
-# Preprocessing
+## Preprocessing
 1. Download the raw WSI data.
 2. Prepare the patches.
 3. Store all the patches directory in a .csv file.
 
-# Download Checkpoint
+## Training
 The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
 
-# Inference
+## Patch Label Prediction
+
+## Patch Filtering
+
+## Bag Feature Generation
+
+## Bag Classification with MIL
+
+
+
+
+
+## Inference
    The 'best_aver.npy' should be first downlaoded from this page first.
 ```python
  python inference.py --model_path .../best.hdf5 --input_file ../xx.csv --save_path /xxx/xxx --aver_path .../best_aver.npy
