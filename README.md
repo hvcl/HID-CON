@@ -26,6 +26,10 @@ Tensorflow 2
 3. Store all the patches directory in a .csv file.
 
 ## Training
+**Warm-up Stage**
+```python
+ CUDA_VISIBLE_DEVICES=0 python patchfeature_extraction.py --dir svs_directory 
+```
 The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
 
 ## Patch Label Prediction
