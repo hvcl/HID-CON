@@ -65,20 +65,28 @@ python hidden_filtering.py --main_dir [directory] --saving_folder [folder taht s
 ```
 
 
-## Patch Label Prediction
+### Bag Classification with MIL
+**1. Bag list generation**
+```python
+python bag_list.py --main_dir [directoty] --patch_list [patch_list after filtering put hidden class patches] --num_bag 50 --num_patch 100
+```
+ 
+**2. Bag feature generation**
+```python
+ python bag_feature_generation.py  --main_dir [directory] --bag_list [sample_images_xxxx_50b100p] --rawpatch_dir [the directory that stored raw patches] 
+```
 
-## Patch Filtering
 
-## Bag Feature Generation
+**3. Bag classification**
+```python
+python bag_classification_github.py  --main_dir [directory] --bag_folder [folder that stored bag features] --label [label in csv] --batch_size [batch size]  --lr [learning rate] --dc [decay weight] --epochs [number of epoch] --iter [iteration number] --save_ckpt_dir [directory for saving checkpoint]
 
-## Bag Classification with MIL
-
-
+```
 
 
 
 ## Inference
    The 'best_aver.npy' should be first downlaoded from this page first.
 ```python
- python inference.py --model_path .../best.hdf5 --input_file ../xx.csv --save_path /xxx/xxx --aver_path .../best_aver.npy
+ python inference.py --model_path [.../best.hdf5] --input_file [../xx.csv] --save_path [/xxx/xxx] --aver_path [.../best_aver.npy]
 ```
