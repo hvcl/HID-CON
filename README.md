@@ -17,18 +17,27 @@ Our method outperforms the state-of-the-art weakly supervised learning methods A
 **Conclusion:**
 The introduction of a hidden class to represent patches commonly found across all subtypes enhances the accuracy of IHCC classification and addresses the weak labeling problem in histopathology images.
 
-## Framework 
+### Framework 
 Tensorflow 2
 
-## Preprocessing
+### Preprocessing
 1. Download the raw WSI data.
 2. Prepare the patches.
 3. Store all the patches directory in a .csv file.
 
-## Training
-**Warm-up Stage**
+### Warm-up Stage Training
+**1. Training warm-up model**
 ```python
- CUDA_VISIBLE_DEVICES=0 python patchfeature_extraction.py --dir svs_directory 
+ python train_hcd_github.py --gpus [gpu's index] --epochs [number of epochs] --batch_size [number of batch] --training_set [training patch list in csv] --validation_set [training patch list in csv] --label [label list in csv] --ckpt_dir [checkpoint directory] 
+```
+**2. Deploy Warm-up model**
+```python
+python patch_label_prediction.py --training_set [Patch list for validation set] --validation_set [Patch list for validation set] --ckpt_dir [Checkpoint directory] --ckpt [checkpoint] --saving_dir [Directory to save the predicted label]  --task warm-up --batch_size [batch size]
+```
+**3. Topk patch filtering**
+
+```python
+python patch_filtering_github.py --saving_dir [folder directory to be saved] --saving_folder [saving folder name]  --set_label [patch list] --set [tr/val]
 ```
 The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
 
