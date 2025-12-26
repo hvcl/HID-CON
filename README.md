@@ -28,7 +28,7 @@ Tensorflow 2
 ### Warm-up Stage Training
 **1. Training warm-up model**
 ```python
- python train_hcd_github.py --gpus [gpu's index] --epochs [number of epochs] --batch_size [number of batch] --training_set [training patch list in csv] --validation_set [training patch list in csv] --label [label list in csv] --ckpt_dir [checkpoint directory] 
+ python train_warmup.py --gpus [gpu's index] --epochs [number of epochs] --batch_size [number of batch] --training_set [training patch list in csv] --validation_set [training patch list in csv] --label [label list in csv] --ckpt_dir [checkpoint directory] 
 ```
 **2. Deploy Warm-up model**
 ```python
@@ -37,7 +37,7 @@ python patch_label_prediction.py --training_set [Patch list for validation set] 
 **3. Topk patch filtering**
 
 ```python
-python patch_filtering_github.py --saving_dir [folder directory to be saved] --saving_folder [saving folder name]  --set_label [patch list] --set [tr/val]
+python topk.py --saving_dir [folder directory to be saved] --saving_folder [saving folder name]  --set_label [patch list] --set [tr/val]
 ```
 The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
 
