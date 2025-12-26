@@ -106,7 +106,7 @@ def main(args):
     day_time = datetime.now().strftime("%Y%m%d%H%M")
     tr_path = f'{args.main_dir}/{args.bag_folder}_conc_tr/'
     img_dir = glob.glob(os.path.join(tr_path, '*'))
-    te_path = f'{args.main_dir}/{args.bag_folder}_conc_tr/'
+    te_path = f'{args.main_dir}/{args.bag_folder}_conc_te/'
     test_img_dir = glob.glob(os.path.join(te_path, '*.npy'))
     
     
