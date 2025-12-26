@@ -73,7 +73,7 @@ python bag_list.py --main_dir [directoty] --patch_list [patch_list after filteri
  
 **2. Bag feature generation**
 ```python
- python bag_feature_generation.py  --main_dir [directory] --bag_list [sample_images_xxxx_50b100p] --rawpatch_dir [the directory that stored raw patches] 
+ python bag_feature_generation.py  --main_dir [directory] --bag_list [sample_images_xxxx_50b100p] --rawpatch_dir [the directory that stored raw patches] --split_file [csv file that stores train or test label]
 ```
 
 
