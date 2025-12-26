@@ -44,7 +44,7 @@ python topk.py --saving_dir [folder directory to be saved] --saving_folder [savi
 ### HID-CON Training
 **1. Training HID-CON model**
 ```python
-python train_hidcon_github.py --gpus [gpu index] --epochs [epoch number] --batch_size [batch size] --main_dir [directory] --label [directory for label] --ckpt_dir [directory for saving checkpoint] --prev_ckpt [previous checkpoint name] --prev_prev_ckpt [previous 2 iteration checkpoint name] --iter_num [iteration number]
+python train_hidcon.py --gpus [gpu index] --epochs [epoch number] --batch_size [batch size] --main_dir [directory] --label [directory for label] --ckpt_dir [directory for saving checkpoint] --prev_ckpt [previous checkpoint name] --prev_prev_ckpt [previous 2 iteration checkpoint name] --iter_num [iteration number]
 ```
 
 
