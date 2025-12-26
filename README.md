@@ -39,7 +39,31 @@ python patch_label_prediction.py --training_set [Patch list for validation set] 
 ```python
 python topk.py --saving_dir [folder directory to be saved] --saving_folder [saving folder name]  --set_label [patch list] --set [tr/val]
 ```
+
+
+### HID-CON Training
+**1. Training HID-CON model**
+```python
+python train_hidcon_github.py --gpus [gpu index] --epochs [epoch number] --batch_size [batch size] --main_dir [directory] --label [directory for label] --ckpt_dir [directory for saving checkpoint] --prev_ckpt [previous checkpoint name] --prev_prev_ckpt [previous 2 iteration checkpoint name] --iter_num [iteration number]
+```
+
+
 The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
+
+**2. Deploy Warm-up model**
+```python
+python patch_label_prediction.py --training_set [Patch list for validation set] --validation_set [Patch list for validation set] --ckpt_dir [Checkpoint directory] --ckpt [checkpoint] --saving_dir [Directory to save the predicted label]  --task warm-up --batch_size [batch size]
+```
+**3. Topk patch filtering for next iteration training**
+
+```python
+python topk.py --saving_dir [folder directory to be saved] --saving_folder [saving folder name]  --set_label [patch list] --set [tr/val]
+```
+**4. Hidden class filtering for downstraem task**
+```python
+python hidden_filtering.py --main_dir [directory] --saving_folder [folder taht saved the patch label prediction]
+```
+
 
 ## Patch Label Prediction
 
