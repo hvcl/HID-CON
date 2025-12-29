@@ -23,7 +23,7 @@ Tensorflow 2
 ### Preprocessing
 1. Download the raw WSI data.
 2. Prepare the patches.
-3. Store all the patches directory in a .csv file.
+3. Store all the patches directory in a .csv file (refer [patch_list.csv](csv_example/patch_list_example.csv)).
 
 ### Warm-up Stage Training
 **1. Training warm-up model**
