@@ -90,3 +90,8 @@ python bag_classification_github.py  --main_dir [directory] --bag_folder [folder
 ```python
  python inference.py --model_path [.../best.hdf5] --input_file [../xx.csv] --save_path [/xxx/xxx] --aver_path [.../best_aver.npy]
 ```
+
+
+# Citation
+Please cite us if you use our work. 
+Tan, Jing Wei, Kyoungbun Lee, and Won-Ki Jeong. "HID-CON: weakly supervised intrahepatic cholangiocarcinoma subtype classification of whole slide images using contrastive hidden class detection." Journal of Medical Imaging 12, no. 6 (2025): 061402-061402.
