@@ -48,8 +48,6 @@ python train_hidcon.py --gpus [gpu index] --epochs [epoch number] --batch_size [
 ```
 
 
-The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
-
 **2. Deploy Warm-up model**
 ```python
 python patch_label_prediction.py --training_set [Patch list for validation set] --validation_set [Patch list for validation set] --ckpt_dir [Checkpoint directory] --ckpt [checkpoint] --saving_dir [Directory to save the predicted label]  --task warm-up --batch_size [batch size]
@@ -66,12 +64,14 @@ python hidden_filtering.py --main_dir [directory] --saving_folder [folder taht s
 
 
 ### Bag Classification with MIL
-**1. Bag list generation**
+**1. Bag list generation** 
+（Example of [bag_list.csv](csv_example/bag_list_example.csv)).
 ```python
 python bag_list.py --main_dir [directoty] --patch_list [patch_list after filtering put hidden class patches] --num_bag 50 --num_patch 100
 ```
  
 **2. Bag feature generation**
+(Example of [split_file.csv](csv_example/split_file_example.csv).)
 ```python
  python bag_feature_generation.py  --main_dir [directory] --bag_list [sample_images_xxxx_50b100p] --rawpatch_dir [the directory that stored raw patches] --split_file [csv file that stores train or test label]
 ```
@@ -90,7 +90,7 @@ python bag_classification_github.py  --main_dir [directory] --bag_folder [folder
 ```python
  python inference.py --model_path [.../best.hdf5] --input_file [../xx.csv] --save_path [/xxx/xxx] --aver_path [.../best_aver.npy]
 ```
-
+The checkpoint can be downloaded from [here](https://huggingface.co/jingwei92/HID-CON/tree/main).
 
 ## Citation
 ### Please cite us if you use our work. 
